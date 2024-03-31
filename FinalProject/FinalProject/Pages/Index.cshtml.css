@@ -1,0 +1,37 @@
+﻿.hero {
+    background-image: url('Backfinal.jpeg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    font-size: large;
+    color: #fff;
+    padding: 100px 0; /* Adjust the padding as needed */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #816F7D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+    .btn:hover {
+        background-color: #faf4fc;
+        color: black;
+    }
+.hero1 {
+    text-align: center;
+    color: black;
+    height: 700px;
+    background-color: #faf4fc;
+}
+
+.emptydiv {
+height: 40px;
+}

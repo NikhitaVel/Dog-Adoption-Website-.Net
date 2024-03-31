@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using FinalProject.Data;
-using FinalProject.Models;
+using Project.Data;
+using Project.Models;
 
-namespace FinalProject.Pages.Users
+namespace Project.Pages.Users
 {
     public class DetailsModel : PageModel
     {
-        private readonly FinalProject.Data.ApplicationDbContext _context;
+        private readonly Project.Data.ApplicationDbContext _context;
 
-        public DetailsModel(FinalProject.Data.ApplicationDbContext context)
+        public DetailsModel(Project.Data.ApplicationDbContext context)
         {
             _context = context;
         }

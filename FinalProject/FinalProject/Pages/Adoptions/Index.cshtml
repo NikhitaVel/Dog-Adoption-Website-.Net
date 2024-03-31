@@ -1,0 +1,48 @@
+﻿@page
+@model Project.Pages.Adoptions.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adoption[0].User)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adoption[0].Center)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adoption[0].Dog)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Adoption) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Center.AdoptionCenterId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dog.DogId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.AdoptionId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.AdoptionId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.AdoptionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

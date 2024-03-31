@@ -1,0 +1,238 @@
+﻿@page
+@model FinalProject.Pages.DonateModel
+@{
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<style>
+
+    ul {
+        list-style-type: none; /* Remove default list bullets */
+        padding-left: 0; /* Remove default list padding */
+    }
+
+    li {
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+
+    .fa-paw {
+        color: #FF1493; /* Adjust the color of the paw icon */
+        margin-right: 10px; /* Add spacing between the icon and text */
+    }
+
+    .highlight-container {
+        position: relative;
+        background-color: #816F7D;
+        padding: 100px 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .highlight-text {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
+        font-size: 40px;
+    }
+
+
+    .highlight-image {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .paddingTop {
+        margin-top: 100px;
+    }
+
+    .right-aligned-image {
+        float: right;
+        margin-left: 10px;
+        width: 450px;
+        height: auto;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .text-container {
+        flex: 1;
+        padding: 5px;
+        background-color: #faf4fc;
+    }
+
+
+    .image-container {
+        flex: 1;
+        padding: 20px;
+    }
+
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    .image-containerSecond {
+        flex: 1;
+        padding: 20px;
+    }
+
+
+        .image-containerSecond img {
+            max-width: 140%;
+            height: 60%;
+        }
+
+    .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .center-box {
+        width: 800px;
+        height: 400px;
+        background-color: #faf4fc;
+        border: 2px solid #816F7D;
+        text-align: center;
+        border-radius: 20px;
+        padding: 60px;
+    }
+
+        .center-box h3 {
+            margin: 0;
+        }
+
+        .center-box p {
+            margin: 0;
+        }
+
+
+    .center-paragraph {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .specific-region {
+        padding: 5px;
+        text-align: center;
+    }
+
+    button#donateButton {
+        appearance: none;
+        border: none;
+        background: none;
+        font-size: 30px;
+        padding: 20px 60px;
+        display: block;
+        margin: 20px auto;
+        background-color: #816F7D;
+    }
+
+    .bodyForButton {
+        background-color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+    <div class="highlight-container paddingButtom">
+        <span class="highlight-text">Why Donate?</span>
+        <img src="~/mission.jpg" alt="Image Description" class="highlight-image">
+    </div>
+
+    <div class="container paddingTop">
+        <div class="text-container">
+            <p>
+                <h3 class="paddingTop">We’re On a Mission to Save More Lives</h3>
+                We decided that the impact we had been making for 60 years could be even bigger. We set out with an ambitious goal to end animal suffering, homelessness and needless euthanasia.
+                We made strategic partnerships, and implemented a host of innovative new programs.
+                And the numbers are in: It’s working.
+            </p>
+        </div>
+        <div class="image-container">
+            <img src="~/Image3.jpg" alt="Image Description">
+        </div>
+    </div>
+
+
+    <div class="center-container ">
+
+
+        <div class="center-box">
+
+            <h3>150,000 More Pets Saved</h3>
+            <br>
+
+
+            <p class=" paddingTop">
+                Since 2013, we’ve reduced euthanasia by 83%. That’s 150,000 additional lives saved. Our trauma hospital and rescue and cruelty investigations team save thousands of dogs, cats, and critters every year. Our Parvo Puppy ICU care for the pets who would be quickly euthanized in other shelters. And every day, we’re providing our community with affordable veterinary care and financial assistance to keep more pets in homes.
+
+                Innovative and visionary programs like these have made our community into a national model of what’s possible when saving lives becomes the top priority.
+            </p>
+        </div>
+    </div>
+
+    <div class="specific-region">
+        <h3>We Can’t Continue This Work Without You</h3>
+    </div>
+
+
+    <div class="container paddingTop">
+        <div class="image-containerSecond">
+            <img src="~/BGImage.jpg" alt="Image Description">
+        </div>
+        <div class="text-container">
+            <p>
+
+                Consider what a difference your donation makes for a dog that otherwise may not get another chance.
+                <ul>
+                    <li><i class="fas fa-paw"></i> <strong>$145 </strong>  – Basic intake care, including de-worming, vaccines, preventative antibiotics and microchip identification.</li>
+                    <li><i class="fas fa-paw"></i> <strong> $200 </strong>  – Spay surgery for a female dog</li>
+                    <li><i class="fas fa-paw"></i> <strong> $125 </strong> – Neuter surgery for a male dog</li>
+                    <li><i class="fas fa-paw"></i> <strong> $1,000</strong>  – Heartworm treatment</li>
+                    <li><i class="fas fa-paw"></i> <strong> $800 </strong> – Amputation surgery</li>
+                    <li><i class="fas fa-paw"></i> <strong> $400 </strong> – Eye removal or repair surgery</li>
+                    <li><i class="fas fa-paw"></i> <strong> $225 </strong> – Dental cleaning</li>
+
+                </ul>
+
+            </p>
+
+            <div class="text-Container bodyForButton">
+
+                <button id="donateButton">Donate</button>
+
+                <script>
+
+                    document.getElementById("donateButton").addEventListener("click", function() {
+                    window.location.href = "/donations/Create";
+                      });
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+

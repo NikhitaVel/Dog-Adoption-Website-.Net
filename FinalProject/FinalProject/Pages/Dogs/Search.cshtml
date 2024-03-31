@@ -1,0 +1,109 @@
+﻿@page
+@model Project.Pages.Dogs.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css">
+    <style>
+        .btn-primary {
+            background-color: #816F7D;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+
+        .dog-card-inner {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .dog-card:hover .dog-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+        <form action="" method="get" class="form-inline">
+        <div class="row">
+            <div class="col-md-6">
+            <input asp-for="Query" class="form-control mr-sm-1 mb-1" placeholder="Search by Breed/Age/Gender" />
+            </div>
+            <div class="col-md-2">
+                <button type="Submit" class="btn btn-primary mb-2">Search</button>
+            </div>
+        </div>
+        </form>
+
+    @if (Model.SearchCompleted)
+    {
+            if (Model.Dog.Any())
+            {
+                <div class="row">
+                    @foreach (var item in Model.Dog)
+                    {
+                        <div class="col-md-2">
+                            <div class="card mb-2">
+                                <img src="@item.ImageUrl" class="card-img-top" alt="Card Image">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                                    <p class="card-text">@Html.DisplayFor(modelItem => item.Breed), @Html.DisplayFor(modelItem => item.Age), @Html.DisplayFor(modelItem => item.Gender)</p>
+                                    <a asp-page="/Dogs/Details" asp-route-id="@item.DogId" class="btn btn-primary">Details</a>
+                                <a asp-page="/Adoptions/Create" asp-route-id="@item.DogId" class="btn btn-primary">Adopt</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+    }else
+    {
+        if (Model.Dog.Any())
+        {
+            <br />
+            <h1>Dogs Available for Adoption</h1>
+            <br />
+            <div class="row">
+                @foreach (var item in Model.Dog)
+                {
+                    <div class="col-md-2">
+                        <div class="card mb-2">
+                            <img src="@item.ImageUrl" class="card-img-top" alt="Card Image">
+                            <div class="card-body">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.Breed), @Html.DisplayFor(modelItem => item.Age), @Html.DisplayFor(modelItem => item.Gender)</p>
+                                <a asp-page="/Dogs/Details" asp-route-id="@item.DogId" class="btn btn-primary">Details</a>
+                                <a asp-page="/Users/Create" class="btn btn-primary">Adopt</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+    <br />
+    <br />
+    <br />
+</body>
+</html>

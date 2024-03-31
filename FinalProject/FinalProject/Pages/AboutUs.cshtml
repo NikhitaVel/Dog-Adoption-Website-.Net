@@ -1,0 +1,244 @@
+﻿@page
+@model FinalProject.Pages.AboutUsModel
+@{
+    //ViewData["Title"] = "About Us";
+}
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<style>
+
+
+
+
+    .right-aligned-image {
+        float: right;
+        margin-left: 10px;
+        width: 450px;
+        height: auto;
+    }
+
+    .paragraph-with-image {
+        overflow: hidden;
+    }
+
+
+
+    .image-text {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .text-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .text-card {
+        flex: 0 0 calc(25% - 10px);
+        border: 1px solid #ccc;
+        padding: 20px;
+        background-color: #faf4fc;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-size: 24px;
+    }
+
+
+        .text-card:nth-child(4n) {
+            margin-right: 0;
+        }
+
+    .custom-image {
+        font-size: 35px;
+        color: #FF1493;
+        margin-bottom: 20px;
+    }
+
+    .tick-mark {
+        color: #FF1493;
+        font-size: 24px;
+    }
+
+    .point-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+        .point-list li::before {
+            content: "\2713";
+            color: #FF1493;
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+
+
+    .highlighted-heading {
+        background-color: #faf4fc;
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+
+    .paddingBottom {
+        margin-bottom: 20px;
+    }
+
+    .paddingTop {
+        margin-top: 20px;
+    }
+
+    body, h1, h2, p, div {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .full-width-image-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+        .full-width-image-container img {
+            width: 100%;
+            height: 450px;
+            display: block;
+            max-width: 100%;
+        }
+
+    =
+    .image-row {
+        display: flex;
+    }
+
+
+    .image-row img {
+        width: 250px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        background-image: url('bg.webp'); /* Replace with your image path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-align: center;
+        font-family: "Arial", sans-serif;
+        font-size: large;
+        color: #fff;
+        padding: 100px 0; /* Adjust the padding as needed */
+    }
+
+</style>
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+<div class="main">
+
+    <h4>Our mission</h4>
+    
+    <h2>GIVE HOPE</h2>
+    <p>Through lifelong commitments and healthy fulfilled lives we believe pets are able to become the best they can be and amazing relationships are built.</p>
+    
+    <br /><br /><br />  <br />
+   
+</div>
+
+<div class="text-card-container">
+    <div class="text-card">
+
+        <i class="fas fa-heartbeat custom-image" aria-hidden="true"></i>
+        <p>We care for nearly 5,000 animals each year through our life-saving programs and services.</p>
+    </div>
+
+    <div class="text-card">
+        <i class="fas fa-hourglass-half custom-image" aria-hidden="true"></i>
+        <p class="callouts">The Toledo Humane Society is the state’s oldest animal welfare organization, serving the Toledo area since 1884. </p>
+    </div>
+
+    <div class="text-card">
+        <i class="fas fa-donate custom-image" aria-hidden="true"></i>
+        <p class="callouts">We do not receive government or national humane society funding and are not affiliated with the United Way. </p>
+    </div>
+
+    <div class="text-card">
+        <i class="fas fa-search custom-image" aria-hidden="true"></i>
+        <p class="callouts">The Toledo Humane Society investigates over 2,000 animal cruelty reports every year. </p>
+    </div>
+</div>
+
+
+
+
+<p class="paddingTop paddingBottom ">
+
+    is a volunteer-driven, no-kill shelter providing rescue and rehabilitation to alleviate the suffering of dogs and cats, while helping each animal find a loving home.
+    Funded entirely by donations and operated solely by volunteers, our Cincinnati no-kill animal shelter and adoption center homes over 300 cats and dogs, many of whom have been abused, abandoned, or literally tossed away.
+    Teams of volunteers work with the animals two shifts a day, 365 days a year, providing them with a safe and caring environment until we can place them in permanent, loving homes.
+    Over the years we have matched thousands of lucky animals with equally lucky families.
+
+</p>
+
+<h3 class="highlighted-heading paddingTop paddingBottom">WHAT WE’RE PROUD OF</h3>
+
+<ul class="point-list paddingTop paddingBottom">
+
+    <li> <strong>100% no-kill shelter for abandoned cats and dogs.</strong> Every animal has a chance.</li>
+    <img src="~/Img1.jpg" alt="Description of the image" class="right-aligned-image">
+
+    <li> <strong>Run by volunteers.</strong> STAF has no paid employees. From the folks responsible for the animals’ day-to-day care to those who fundraise, maintain the building, and serve on our board of directors; all volunteers, all here out of pure love for the animals, all paid with purrs, tail wags and the simple satisfaction of knowing that we’re making a difference.</li>
+
+
+    <li> <strong>Private, non-profit organization funded completely by donations and fund-raisers.</strong> The shelter receives no government funding, nor does it spend any money on salaries. All goes directly to the animals..</li>
+
+
+    <li> <strong>Top-notch care.</strong> All our animals are fed a high-quality diet, receive regular visits by a core network of dedicated vets, and their living areas are cleaned twice a day, every day. Every incoming animal receives a thorough exam and appropriate vaccinations before being admitted into the shelter population. All of our animals are spayed or neutered in keeping with our philosophy of promoting responsible pet ownership.</li>
+
+    <li>
+        <strong>Individual attention.</strong> Much more than room and board, STAF goes the extra mile to give our animals the individual attention they need and deserve. Off-site obedience training, home-like quiet rooms for one-on-one time, and a volunteer/dog mentor program are just a few of the initiatives that ensure a high quality of shelter life for our dogs. On the cat side, ongoing programs such as “Cat Care Corps” and “Brush-n-Fluff” days are designed to socialize our cats to human touch and give volunteers and kitties some special quality time.
+    </li>
+
+
+</ul>
+
+<h3 class="highlighted-heading paddingTop paddingBottom"> ADOPTIONS </h3>
+<p>
+    If you’ve got room in your heart and home, we’ve got some friends we’d like you to meet! Our shelter currently homes 50 wonderful dogs and more than 300 spectacular cats. Short hair, long hair, big and small, young and “seasoned”, playful and laidback, all here waiting for that special someone!
+
+    We’re very proud of our animals and are thrilled that you’re considering our shelter when adding a member to your family. When an animal comes to STAF, we commit to giving that animal a lifetime of care and love. When we pass that responsibility onto another through an adoption, our goal is to place the animal in a long-term, loving home.
+</p>
+
+<p>We’re very proud of our animals and are thrilled that you’re considering our shelter when adding a member to your family. When an animal comes to STAF, we commit to giving that animal a lifetime of care and love. When we pass that responsibility onto another through an adoption, our goal is to place the animal in a long-term, loving home.</p>
+
+<p>Our adoption process, fine-tuned over many years of successfully placing animals in their forever homes, includes an application and informal interview with a STAF volunteer who will work with you one-on-one to find the perfect fit for your family and lifestyle. This volunteer will introduce you to animals, share background and health information, and tell you about each animal’s personality and special traits and talents.</p>
+
+<p>Dog adoption hours are Saturdays 11:00am-2:00pm, by appointment only.<strong> You must be 21 years of age or older to adopt.</strong></p>
+
+<p class="paddingBottom">Please visit our adoption page for more specific information on our adoption requirements and process. </p>
+
+
+<h3 class="highlighted-heading paddingTop paddingBottom"> Come Visit Us! </h3>
+<p class="paddingBottom">We proudly open our shelter to the public several times a year during our Brush-n-Fluff and Open House events. Stop on by, tour the shelter, meet our fabulous and adorable animals, maybe even fall in love!</p>
+
+<div class="image-row">
+    <img src="~/Image1.jpg" alt="Image 1">
+    <img src="~/Image2.jpg" alt="Image 2">
+    <img src="~/Image3.jpg" alt="Image 3">
+    <img src="~/Image4.jpg" alt="Image 3">
+    <img src="~/Image5.jpg" alt="Image 3">
+    <!-- Add more images as needed -->
+</div>
+<br>
+<br />
+<br />
+<br />
+<br />

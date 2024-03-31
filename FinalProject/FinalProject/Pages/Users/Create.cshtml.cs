@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using FinalProject.Data;
-using FinalProject.Models;
+using Project.Data;
+using Project.Models;
 
-namespace FinalProject.Pages.Users
+namespace Project.Pages.Users
 {
     public class CreateModel : PageModel
     {
-        private readonly FinalProject.Data.ApplicationDbContext _context;
+        private readonly Project.Data.ApplicationDbContext _context;
 
-        public CreateModel(FinalProject.Data.ApplicationDbContext context)
+        public CreateModel(Project.Data.ApplicationDbContext context)
         {
             _context = context;
         }
@@ -39,7 +39,7 @@ namespace FinalProject.Pages.Users
             _context.User.Add(User);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Thankyou");
         }
     }
 }

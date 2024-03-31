@@ -1,0 +1,68 @@
+﻿@page
+@model Project.Pages.AdoptionCenters.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<html>
+<head>
+    <style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+
+        .dog-item {
+            margin-bottom: 20px;
+        }
+
+        .dog-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <h1>Manage Dogs</h1>
+
+    <div>
+        <a asp-page="/Dogs/Create">Add a new dog</a>
+        <br />
+    </div>
+
+
+    <div>
+        <br />
+    </div>
+
+    @if (Model.AdoptionCenter.Dogs.Any())
+    {
+        <div class="row">
+            @foreach (var item in Model.AdoptionCenter.Dogs)
+            {
+                <div class="col-md">
+                    <div class="dog-item">
+                        <div class="">
+                            <img src="@item.ImageUrl" alt="Dog img">
+                        </div>
+                        <div class="dog-details">
+                            <div class="media-body">
+                                <h5 class="mt-0">@Html.DisplayFor(modelItem => item.Name)</h5>
+                                <p><strong>Breed:</strong> @Html.DisplayFor(modelItem => item.Breed)</p>
+                                <p><strong>Age:</strong> @Html.DisplayFor(modelItem => item.Age)</p>
+                                <p><strong>Gender:</strong> @Html.DisplayFor(modelItem => item.Gender)</p>
+                                <p><strong>Is Vaccinated? :</strong> @Html.DisplayFor(modelItem => item.IsVaccinated)</p>
+                                <a asp-page="./Edit" asp-route-id="@item.DogId">Edit</a>
+                                <a asp-page="./Delete" asp-route-id="@item.DogId">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    }
+</body>
+</html>

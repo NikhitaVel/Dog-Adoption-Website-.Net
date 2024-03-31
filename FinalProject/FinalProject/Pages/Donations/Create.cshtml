@@ -1,0 +1,105 @@
+﻿@page
+@model Project.Pages.Donations.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    body {
+        background-color: #faf4fc;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .text-container {
+        flex: 1;
+        padding: 5px;
+        background-color: #faf4fc;
+    }
+
+    .image-container {
+        flex: 1;
+        padding: 20px;
+    }
+
+        .image-container img {
+            max-width: 80%;
+            height: auto;
+        }
+</style>
+<body>
+
+    <h3>
+        Thank you for considering a monetary donation to Furry Rescue!  <img src="~/paw.jpg" alt="Paw Image" width="40" height="30" />
+
+    </h3>
+    <hr />
+    <div class="container">
+        <div class="image-container">
+            <img src="~/donateImag.jpg" alt="Image Description">
+        </div>
+        <div class="text-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <form method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Donation.UserId" class="control-label"></label>
+                            <select asp-for="Donation.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Donation.CenterId" class="control-label"></label>
+                            <select asp-for="Donation.CenterId" class="form-control" asp-items="ViewBag.CenterId"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Donation.Amount" class="control-label"></label>
+                            <input asp-for="Donation.Amount" class="form-control" />
+                            <span asp-validation-for="Donation.Amount" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Donation.DonationDate" class="control-label"></label>
+                            <input asp-for="Donation.DonationDate" class="form-control" />
+                            <span asp-validation-for="Donation.DonationDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Donation.ContactEmail" class="control-label"></label>
+                            <input asp-for="Donation.ContactEmail" class="form-control" />
+                            <span asp-validation-for="Donation.ContactEmail" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Donation.ContactPhone" class="control-label"></label>
+                            <input asp-for="Donation.ContactPhone" class="form-control" />
+                            <span asp-validation-for="Donation.ContactPhone" class="text-danger"></span>
+                        </div>
+                        <br>
+
+                        <div class="form-group">
+                            <input type="submit" value="Donate" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <p>Your donation to Rescue Furry provides a second chance to dogs  who urgently need lifesaving care and a loving home.</p>
+    <h3>Thankyou!</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+
+</body>
+

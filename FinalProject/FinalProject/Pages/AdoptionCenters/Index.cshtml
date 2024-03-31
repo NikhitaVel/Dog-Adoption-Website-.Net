@@ -1,0 +1,67 @@
+﻿@page
+@model Project.Pages.AdoptionCenters.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html>
+<head>
+    <style>
+        body {
+            background-color: #faf4fc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Centers</h1>
+
+    <p>
+        <a asp-page="Create">Add New Center</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdoptionCenter[0].CenterName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdoptionCenter[0].Location)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AdoptionCenter[0].ZipCode)
+                </th>
+                <th></th>
+                <th></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.AdoptionCenter)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CenterName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ZipCode)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.AdoptionCenterId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.AdoptionCenterId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.AdoptionCenterId">Delete</a>
+                    </td>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@item.AdoptionCenterId" class="btn btn-primary" style=" background-color: #816F7D; color: #fff; font-weight: bold; border: none;">Manage Dogs</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -6,16 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using FinalProject.Data;
-using FinalProject.Models;
+using Project.Data;
+using Project.Models;
 
-namespace FinalProject.Pages.Users
+namespace Project.Pages.Users
 {
     public class EditModel : PageModel
     {
-        private readonly FinalProject.Data.ApplicationDbContext _context;
+        private readonly Project.Data.ApplicationDbContext _context;
 
-        public EditModel(FinalProject.Data.ApplicationDbContext context)
+        public EditModel(Project.Data.ApplicationDbContext context)
         {
             _context = context;
         }

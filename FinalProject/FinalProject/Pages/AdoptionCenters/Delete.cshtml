@@ -1,0 +1,52 @@
+﻿@page
+@model Project.Pages.AdoptionCenters.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AdoptionCenter</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdoptionCenter.CenterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdoptionCenter.CenterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdoptionCenter.Location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdoptionCenter.Location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdoptionCenter.ZipCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdoptionCenter.ZipCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdoptionCenter.ContactEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdoptionCenter.ContactEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdoptionCenter.ContactPhone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdoptionCenter.ContactPhone)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="AdoptionCenter.AdoptionCenterId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

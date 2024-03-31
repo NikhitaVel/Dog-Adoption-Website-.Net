@@ -1,13 +1,29 @@
 ﻿@page
-@model FinalProject.Pages.Users.CreateModel
+@model Project.Pages.Users.CreateModel
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #faf4fc;
+        }
 
-<h4>User</h4>
+        .btn-primary {
+            background-color: #816F7D;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Please Enter Your Details to Place an Adoption Request</h1>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -48,17 +64,20 @@
                 <input asp-for="User.ContactPhone" class="form-control" />
                 <span asp-validation-for="User.ContactPhone" class="text-danger"></span>
             </div>
+                <br />
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Proceed" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-page="Index">Back to List</a>
-</div>
+    <br>
+    <br />
 
+</body>
+</html>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

@@ -11495,24 +11495,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\basnetaa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\nikhi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\basnetaa\\Source\\Repos\\IS7012\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "projectUniqueName": "C:\\University of Cincinnati\\GitHub\\Dog-Adoption-Website-.Net\\FinalProject\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\basnetaa\\Source\\Repos\\IS7012\\FinalProject\\FinalProject\\FinalProject.csproj",
-      "packagesPath": "C:\\Users\\basnetaa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\basnetaa\\Source\\Repos\\IS7012\\FinalProject\\FinalProject\\obj\\",
+      "projectPath": "C:\\University of Cincinnati\\GitHub\\Dog-Adoption-Website-.Net\\FinalProject\\FinalProject\\FinalProject.csproj",
+      "packagesPath": "C:\\Users\\nikhi\\.nuget\\packages\\",
+      "outputPath": "C:\\University of Cincinnati\\GitHub\\Dog-Adoption-Website-.Net\\FinalProject\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\basnetaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\nikhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11520,8 +11515,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11590,7 +11583,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
